@@ -20,7 +20,7 @@ body {
   font-size: var(--text-base);
   line-height: var(--leading-normal);
   color: var(--color-text-primary);
-  background: var(--color-bg-light);
+  background: var(--color-bg-dark);
   overflow-x: hidden;
 }
 
@@ -121,7 +121,7 @@ ul { list-style: none; }
   justify-content: center;
   gap: var(--space-2);
   padding: var(--space-4) var(--space-8);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   font-family: var(--font-body);
   font-size: var(--text-base);
   font-weight: var(--weight-semibold);
@@ -334,7 +334,7 @@ a:focus-visible {
   display: flex;
   align-items: center;
   padding-top: calc(var(--section-pad-y) + 60px);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .hero__inner {
