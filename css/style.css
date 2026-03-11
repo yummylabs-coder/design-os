@@ -340,6 +340,10 @@ a:focus-visible {
 .hero__inner {
   position: relative;
   z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: var(--space-10);
 }
 
 .hero__headline {
@@ -354,9 +358,29 @@ a:focus-visible {
 .hero__sub {
   font-size: var(--text-lg);
   color: rgba(255, 255, 255, 0.7);
-  max-width: 50ch;
+  max-width: 54ch;
   line-height: var(--leading-relaxed);
   margin-bottom: var(--space-10);
+}
+
+/* Hero diagram */
+.hero__diagram {
+  display: none;
+}
+
+.hero__diagram-svg {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.hero__diagram-line {
+  animation: hero-line-dash 20s linear infinite;
+}
+
+@keyframes hero-line-dash {
+  to { stroke-dashoffset: -80; }
 }
 
 .hero__ctas {
@@ -1262,6 +1286,18 @@ a:focus-visible {
   .hero__headline {
     font-size: var(--text-3xl);
   }
+
+  .hero__inner {
+    grid-template-columns: 1.2fr 1fr;
+  }
+
+  .hero__headline {
+    font-size: clamp(2.4rem, 1.6rem + 2.5vw, 3.2rem);
+  }
+
+  .hero__diagram {
+    display: block;
+  }
 }
 
 /* Desktop (1400px+) */
@@ -1279,8 +1315,7 @@ a:focus-visible {
   }
 
   .hero__headline {
-    font-size: clamp(3rem, 2.2rem + 4vw, 5rem);
-    max-width: 80%;
+    font-size: clamp(2.8rem, 2rem + 3vw, 4.2rem);
   }
 }
 

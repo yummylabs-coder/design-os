@@ -49,6 +49,63 @@
         </div>
         <a href="#solution" class="hero__scroll-link hero__line">See how it works &darr;</a>
       </div>
+
+      <!-- Hero diagram -->
+      <div class="hero__diagram hero__line" aria-hidden="true">
+        <svg viewBox="0 0 480 480" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero__diagram-svg">
+          <!-- Connection lines (drawn first, behind nodes) -->
+          <line x1="240" y1="240" x2="240" y2="80" stroke="rgba(88,79,255,0.25)" stroke-width="1" stroke-dasharray="4 4" class="hero__diagram-line" />
+          <line x1="240" y1="240" x2="400" y2="180" stroke="rgba(88,79,255,0.25)" stroke-width="1" stroke-dasharray="4 4" class="hero__diagram-line" />
+          <line x1="240" y1="240" x2="400" y2="340" stroke="rgba(88,79,255,0.25)" stroke-width="1" stroke-dasharray="4 4" class="hero__diagram-line" />
+          <line x1="240" y1="240" x2="80" y2="180" stroke="rgba(88,79,255,0.25)" stroke-width="1" stroke-dasharray="4 4" class="hero__diagram-line" />
+          <line x1="240" y1="240" x2="80" y2="340" stroke="rgba(88,79,255,0.25)" stroke-width="1" stroke-dasharray="4 4" class="hero__diagram-line" />
+
+          <!-- Center node — Prototype -->
+          <rect x="180" y="200" width="120" height="80" rx="12" fill="rgba(88,79,255,0.12)" stroke="var(--color-purple)" stroke-width="1.5" />
+          <text x="240" y="234" text-anchor="middle" fill="white" font-family="var(--font-heading)" font-size="11" font-weight="700" letter-spacing="0.05em">PROTOTYPE</text>
+          <text x="240" y="254" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-family="var(--font-mono)" font-size="9">live &bull; on-brand</text>
+
+          <!-- Role nodes -->
+          <!-- Designer (top center) -->
+          <circle cx="240" cy="68" r="28" fill="rgba(241,255,83,0.1)" stroke="var(--color-accent)" stroke-width="1" />
+          <text x="240" y="64" text-anchor="middle" fill="var(--color-accent)" font-size="16">&#9998;</text>
+          <text x="240" y="82" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="var(--font-mono)" font-size="8" letter-spacing="0.04em">Refines</text>
+          <text x="240" y="116" text-anchor="middle" fill="rgba(255,255,255,0.65)" font-family="var(--font-body)" font-size="11" font-weight="600">Designer</text>
+
+          <!-- PM (top right) -->
+          <circle cx="400" cy="168" r="28" fill="rgba(88,79,255,0.1)" stroke="var(--color-purple)" stroke-width="1" />
+          <text x="400" y="164" text-anchor="middle" fill="var(--color-purple)" font-size="16">&#9776;</text>
+          <text x="400" y="182" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="var(--font-mono)" font-size="8" letter-spacing="0.04em">Prototypes</text>
+          <text x="400" y="216" text-anchor="middle" fill="rgba(255,255,255,0.65)" font-family="var(--font-body)" font-size="11" font-weight="600">PM</text>
+
+          <!-- Engineer (bottom right) -->
+          <circle cx="400" cy="328" r="28" fill="rgba(34,22,255,0.1)" stroke="var(--color-blue)" stroke-width="1" />
+          <text x="400" y="324" text-anchor="middle" fill="var(--color-blue)" font-size="14" font-family="var(--font-mono)">&lt;/&gt;</text>
+          <text x="400" y="342" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="var(--font-mono)" font-size="8" letter-spacing="0.04em">Reviews</text>
+          <text x="400" y="376" text-anchor="middle" fill="rgba(255,255,255,0.65)" font-family="var(--font-body)" font-size="11" font-weight="600">Engineer</text>
+
+          <!-- Marketer (top left) -->
+          <circle cx="80" cy="168" r="28" fill="rgba(255,107,53,0.1)" stroke="rgba(255,107,53,0.6)" stroke-width="1" />
+          <text x="80" y="166" text-anchor="middle" fill="rgba(255,107,53,0.8)" font-size="16">&#9672;</text>
+          <text x="80" y="182" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="var(--font-mono)" font-size="8" letter-spacing="0.04em">Creates</text>
+          <text x="80" y="216" text-anchor="middle" fill="rgba(255,255,255,0.65)" font-family="var(--font-body)" font-size="11" font-weight="600">Marketer</text>
+
+          <!-- Founder (bottom left) -->
+          <circle cx="80" cy="328" r="28" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+          <text x="80" y="324" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="16">&#9733;</text>
+          <text x="80" y="342" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="var(--font-mono)" font-size="8" letter-spacing="0.04em">Explores</text>
+          <text x="80" y="376" text-anchor="middle" fill="rgba(255,255,255,0.65)" font-family="var(--font-body)" font-size="11" font-weight="600">Founder</text>
+
+          <!-- Subtle pulse ring on center -->
+          <rect x="180" y="200" width="120" height="80" rx="12" fill="none" stroke="var(--color-purple)" stroke-width="0.5" opacity="0.3">
+            <animate attributeName="opacity" values="0.3;0;0.3" dur="3s" repeatCount="indefinite" />
+            <animate attributeName="x" values="180;174;180" dur="3s" repeatCount="indefinite" />
+            <animate attributeName="y" values="200;194;200" dur="3s" repeatCount="indefinite" />
+            <animate attributeName="width" values="120;132;120" dur="3s" repeatCount="indefinite" />
+            <animate attributeName="height" values="80;92;80" dur="3s" repeatCount="indefinite" />
+          </rect>
+        </svg>
+      </div>
     </div>
     <div class="hero__glow" aria-hidden="true"></div>
   </section>
