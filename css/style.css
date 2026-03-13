@@ -369,27 +369,30 @@ a:focus-visible {
   position: relative;
 }
 
-/* Floating badges */
+/* Floating badges — frosted glass */
 .hero__badge {
   position: absolute;
   display: flex;
   align-items: center;
   gap: 6px;
   padding: 7px 16px;
-  background: #ffffff;
-  border: 1px solid #ebebef;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 100px;
   font-family: var(--font-mono);
   font-size: 11px;
   color: var(--color-bg-dark);
   white-space: nowrap;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   z-index: 3;
+  opacity: 0.85;
   animation: hero-badge-float 4s ease-in-out infinite;
 }
 
 .hero__badge-role {
-  color: #a1a1aa;
+  color: rgba(50, 1, 1, 0.45);
 }
 
 .hero__badge-dot {
@@ -403,21 +406,22 @@ a:focus-visible {
 .hero__badge-dot--purple { background: var(--color-purple); }
 .hero__badge-dot--yellow { background: var(--color-accent); }
 
+/* Badges positioned above and below the browser — no overlap */
 .hero__badge--1 {
-  top: -16px;
-  right: 8%;
+  top: -28px;
+  right: 4%;
   animation-delay: 0s;
 }
 
 .hero__badge--2 {
-  top: 50%;
-  left: -10%;
+  top: -28px;
+  left: 6%;
   animation-delay: 1.2s;
 }
 
 .hero__badge--3 {
-  bottom: -16px;
-  right: 12%;
+  bottom: -28px;
+  right: 8%;
   animation-delay: 2.4s;
 }
 
